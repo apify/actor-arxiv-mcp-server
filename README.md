@@ -18,7 +18,7 @@ The ArXiv MCP Server provides a bridge between AI assistants and arXiv's researc
 
 ## How to use 🚀
 
-Connect your MCP client to `https://jakub-kopecky--actor-arxiv-mcp-server.apify.actor/sse` with the following headers:
+Connect your MCP client to `https://jakub-kopecky--arxiv-mcp-server.apify.actor/sse` with the following headers:
 ```
 Authorization: Bearer YOUR_APIFY_TOKEN
 ```

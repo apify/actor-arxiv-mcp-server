@@ -18,13 +18,23 @@ import { waitForServer } from "./utils.js";
 // Note that we need to use `.js` even when inside TS files
 // import { router } from './routes.js';
 
-// Initialize the Apify Actor environment
-// The init() call configures the Actor for its environment. It's recommended to start every Actor with an init()
-await Actor.init();
 
 // Configuration constants for the MCP server
 const MCP_SERVER_PORT = 3000; // Port on which the MCP server will run locally
 const MCP_COMMAND = "uv tool run arxiv-mcp-server"; // Command to run the ArXiv MCP server using uv package manager
+
+// Check if the Actor is running in standby mode
+const STANDBY_MODE = Actor.getEnv().metaOrigin === 'STANDBY';
+
+
+// Initialize the Apify Actor environment
+// The init() call configures the Actor for its environment. It's recommended to start every Actor with an init()
+await Actor.init();
+
+if (!STANDBY_MODE) {
+    // If the Actor is not in standby mode, we should not run the MCP server
+    await Actor.fail('This actor is not meant to be run directly. It should be run in standby mode.');
+}
 
 /**
  * Spawn the supergateway process that will run the ArXiv MCP server
