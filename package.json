@@ -1,0 +1,30 @@
+{
+	"name": "actor-arxiv-mcp-server",
+	"version": "0.0.1",
+	"type": "module",
+	"description": "The ArXiv MCP Server provides a bridge between AI assistants and arXiv's research repository through the Model Context Protocol (MCP). It allows AI models to search for papers and access their content in a programmatic way.",
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"dependencies": {
+		"apify": "^3.4.1"
+	},
+	"devDependencies": {
+		"@apify/tsconfig": "^0.1.1",
+		"@biomejs/biome": "1.9.4",
+		"typescript": "^5.8.3"
+	},
+	"scripts": {
+		"start": "npm run start:dev",
+		"start:prod": "node dist/main.js",
+		"start:dev": "tsx src/main.ts",
+		"build": "tsc",
+		"lint": "biome lint",
+		"lint:fix": "biome lint --write",
+		"format": "biome format",
+		"format:fix": "biome format --write",
+		"test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
+	},
+	"author": "It's not you it's me",
+	"license": "ISC"
+}

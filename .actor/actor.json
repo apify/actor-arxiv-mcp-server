@@ -1,0 +1,13 @@
+{
+	"actorSpecification": 1,
+	"name": "actor-arxiv-mcp-server",
+	"title": "Arxiv MCP server",
+	"description": " A Model Context Protocol server for searching and analyzing arXiv papers.",
+	"version": "0.0",
+	"buildTag": "latest",
+	"usesStandbyMode": true,
+	"meta": {
+		"templateId": "ts-standby"
+	},
+	"dockerfile": "./Dockerfile"
+}
