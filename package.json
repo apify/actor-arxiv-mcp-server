@@ -7,11 +7,20 @@
 		"node": ">=20.0.0"
 	},
 	"dependencies": {
-		"apify": "^3.4.1"
+		"@modelcontextprotocol/sdk": "^1.11.4",
+		"apify": "^3.4.1",
+		"body-parser": "^2.2.0",
+		"express": "^5.1.0"
 	},
 	"devDependencies": {
+		"@apify/eslint-config-ts": "^0.3.0",
 		"@apify/tsconfig": "^0.1.1",
-		"@biomejs/biome": "1.9.4",
+		"@types/body-parser": "^1.19.5",
+		"@types/express": "^5.0.2",
+		"@typescript-eslint/eslint-plugin": "^7.18.0",
+		"@typescript-eslint/parser": "^7.18.0",
+		"eslint": "^8.50.0",
+		"tsx": "^4.6.2",
 		"typescript": "^5.8.3"
 	},
 	"scripts": {
@@ -19,10 +28,6 @@
 		"start:prod": "node dist/main.js",
 		"start:dev": "tsx src/main.ts",
 		"build": "tsc",
-		"lint": "biome lint",
-		"lint:fix": "biome lint --write",
-		"format": "biome format",
-		"format:fix": "biome format --write",
 		"test": "echo \"Error: oops, the actor has no tests yet, sad!\" && exit 1"
 	},
 	"author": "It's not you it's me",

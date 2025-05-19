@@ -18,8 +18,6 @@ RUN npm run build
 # Create final image
 FROM node:22-alpine
 
-# Install supergateway
-RUN npm i -g supergateway
 # Install uv
 RUN apk add py3-uv
 
@@ -52,6 +50,7 @@ RUN npm --quiet set progress=false \
     && rm -r ~/.npm
 
 # Install the MCP server
+# TODO: Install the MCP server you are actually using
 RUN uv tool install arxiv-mcp-server
 
 # Tell Node.js this is a production environemnt
