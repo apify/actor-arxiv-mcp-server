@@ -1,0 +1,21 @@
+{
+	"actorSpecification": 1,
+	"name": "arxiv-mcp-server",
+	"title": "Arxiv MCP server",
+	"description": "A Model Context Protocol server for searching and analyzing arXiv papers.",
+	"version": "0.0",
+	"buildTag": "latest",
+	"usesStandbyMode": true,
+	"meta": {
+		"templateId": "ts-actorized-mcp-stdio"
+	},
+	"input": {
+        "title": "Actor input schema",
+        "description": "This is Actor input schema",
+        "type": "object",
+        "schemaVersion": 1,
+        "properties": {},
+        "required": []
+    },
+	"dockerfile": "./Dockerfile"
+}
