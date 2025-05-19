@@ -1,5 +1,7 @@
 ## ArXiv MCP server Actor
 
+[![ArXiv MCP server Actor](https://apify.com/actor-badge?actor=jakub.kopecky/arxiv-mcp-server)](https://apify.com/jakub.kopecky/arxiv-mcp-server)
+
 > 🔍 Enables AI assistants to search for and access arXiv papers through a simple MCP interface.
 
 The ArXiv MCP Server provides a bridge between AI assistants and arXiv's research repository through the Model Context Protocol (MCP). It allows AI models to search for papers and access their content in a programmatic way.
