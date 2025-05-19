@@ -26,3 +26,11 @@ Authorization: Bearer YOUR_APIFY_TOKEN
 ## Open source 🌟
 
 This project is open-source and available on [GitHub](https://github.com/apify/actor-arxiv-mcp-server). 🐙✨
+
+## Resources 📚
+
+- [What is Anthropic's Model Context Protocol?](https://blog.apify.com/what-is-model-context-protocol/)
+- [How to use MCP with Apify Actors](https://blog.apify.com/how-to-use-mcp/)
+- [Apify MCP server](https://mcp.apify.com)
+- [Apify MCP server documentation](https://docs.apify.com/platform/integrations/mcp)
+- [Apify MCP client](https://apify.com/jiri.spilka/tester-mcp-client)

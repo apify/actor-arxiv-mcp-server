@@ -51,7 +51,7 @@ RUN npm --quiet set progress=false \
 
 # Install the MCP server
 # TODO: Install the MCP server you are actually using
-RUN uv tool install arxiv-mcp-server
+RUN uv tool install arxiv-mcp-server==0.2.10
 
 # Tell Node.js this is a production environment
 ENV NODE_ENV=production
