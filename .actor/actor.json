@@ -7,7 +7,7 @@
 	"buildTag": "latest",
 	"usesStandbyMode": true,
 	"meta": {
-		"templateId": "ts-standby"
+		"templateId": "ts-actorized-mcp-stdio"
 	},
 	"input": {
         "title": "Actor input schema",
