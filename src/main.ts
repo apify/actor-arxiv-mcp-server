@@ -38,8 +38,9 @@ await Actor.charge({ eventName: 'actor-start' });
 
 if (!STANDBY_MODE) {
     // If the Actor is not in standby mode, we should not run the MCP server
-    log.error('This actor is not meant to be run directly. It should be run in standby mode.');
-    await Actor.exit();
+    const msg = 'This actor is not meant to be run directly. It should be run in standby mode.';
+    log.error(msg);
+    await Actor.exit({ statusMessage: msg });
 }
 
 const logger = getLogger({
