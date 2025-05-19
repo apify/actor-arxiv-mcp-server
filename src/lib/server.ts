@@ -51,13 +51,13 @@ export async function stdioToSse(args: StdioToSseArgs) {
 
     const sessions: Record<
     string,
-    { transport: SSEServerTransport; response: express.Response }
+    { transport: SSEServerTransport }
   > = {};
 
     const app = express();
 
     app.use((req, res, next) => {
-        // Handle Apify stabdby readiness probe
+        // Handle Apify standby readiness probe
         if (req.headers['x-apify-container-server-readiness-probe']) {
             res.writeHead(200);
             res.end('ok');
@@ -75,7 +75,7 @@ export async function stdioToSse(args: StdioToSseArgs) {
 
         const { sessionId } = sseTransport;
         if (sessionId) {
-            sessions[sessionId] = { transport: sseTransport, response: res };
+            sessions[sessionId] = { transport: sseTransport };
         }
 
         sseTransport.onmessage = (msg: JSONRPCMessage) => {
